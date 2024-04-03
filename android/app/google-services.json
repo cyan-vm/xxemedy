@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "416009872847",
-    "project_id": "xxemedy",
-    "storage_bucket": "xxemedy.appspot.com"
+    "project_number": "430339424604",
+    "project_id": "xxemedy-b53d8",
+    "storage_bucket": "xxemedy-b53d8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:416009872847:android:8f4966f2ac00a684339eba",
+        "mobilesdk_app_id": "1:430339424604:android:ecdc434102325c0a420199",
         "android_client_info": {
           "package_name": "com.codeforany.fitness"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAd9ibmJpWH_7-eXNcJjDP-G2bcD4fbbTg"
+          "current_key": "AIzaSyC7ev1_epWX4tPhyNjkoRlwsiEpCgyRYMY"
         }
       ],
       "services": {

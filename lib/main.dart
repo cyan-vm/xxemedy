@@ -1,22 +1,26 @@
 import 'package:fitness/view/main_tab/main_tab_view.dart';
 import 'package:flutter/material.dart';
-
 import 'package:fitness/common/common.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:fitness/common/colo_extension.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:fitness/view/home/galleryView.dart';
 
+// import 'package'
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-  // FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
 
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  // throw RuntimeException("Test Crash"); // Force a crash
+
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -26,20 +30,18 @@ class MyApp extends StatelessWidget {
       title: 'Fitness 3 in 1',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primaryColor: TColor.primaryColor1,
-        fontFamily: "Poppins"
-      ),
-      home: const MainTabView(),
+          // This is the theme of your application.
+          //
+          // Try running your application with "flutter run". You'll see the
+          // application has a blue toolbar. Then, without quitting the app, try
+          // changing the primarySwatch below to Colors.green and then invoke
+          // "hot reload" (press "r" in the console where you ran "flutter run",
+          // or simply save your changes to "hot reload" in a Flutter IDE).
+          // Notice that the counter didn't reset back to zero; the application
+          // is not restarted.
+          primaryColor: TColor.primaryColor1,
+          fontFamily: "Poppins"),
+      home: const PhotoProgressView(),
     );
   }
 }
-
